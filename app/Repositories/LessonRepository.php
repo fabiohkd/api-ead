@@ -19,6 +19,7 @@ class LessonRepository
 	{
 		return $this->entity
 								->where('module_id', $moduleId)
+								->with('supports.replies')
 								->get();
 	}
 
